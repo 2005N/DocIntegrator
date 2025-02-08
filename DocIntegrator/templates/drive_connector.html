@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drive Connector</title>
+</head>
+<body>
+    <h1>🌥 Drive Connector </h1>
+
+    <h3>List Drive Files:</h3>
+    <button onclick="listFiles()">List Files</button>
+    <ul id="fileList"></ul>
+
+    <h3>Download a File:</h3>
+    <input type="text" id="fileId" placeholder="Enter File ID">
+    <input type="text" id="fileName" placeholder="Enter File Name">
+    <button onclick="downloadFile()">Download</button>
+    <p id="downloadStatus"></p>
+
+    <h3>Upload a File:</h3>
+    <input type="file" id="uploadInput">
+    <button onclick="uploadFile()">Upload</button>
+    <p id="uploadStatus"></p>
+    <br>
+    <h3>Go to AI Search:</h3>
+    <button onclick="window.location.href='/ai_search'">Go to AI Search</button>
+
+
+    <script src="{{ url_for('static', filename='drive_connector.js') }}"></script>
+</body>
+</html>
